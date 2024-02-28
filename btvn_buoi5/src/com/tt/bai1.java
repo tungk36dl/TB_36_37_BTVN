@@ -17,6 +17,10 @@ public class bai1 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap vao so luong phan tu cua mang: ");
         int n = sc.nextInt();
+        do{
+            System.out.println("So luong phan tu phai lon hon 0. Vui long nhap lai!!!");
+             n = sc.nextInt();
+        }while (n<1);
         int[] arr = new int[n];
 
         for(int i = 0; i < n; i++) {
