@@ -30,7 +30,7 @@ public class giaiBT {
     public static void soNguyenTo(int[] arr, int n){
         System.out.print("Cac so nguyen to trong mang la: ");
         for (int i = 0; i < n; i++) {
-            if(arr[i] < 1){
+            if(arr[i] < 2){
 
             }else if(arr[i] == 2) {
                 System.out.print(arr[i] + " ");
