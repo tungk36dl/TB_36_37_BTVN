@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="993568db-c0bb-4a9b-8472-0ff0bf053826" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buoi5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tt/Program.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tt/tinhToan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../btvn_buoi5/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../btvn_buoi5/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../btvn_buoi5/src/com/tt/giaiBT.java" beforeDir="false" afterPath="$PROJECT_DIR$/../btvn_buoi5/src/com/tt/giaiBT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/btvn_buoi5/com/tt/giaiBT.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/btvn_buoi5/com/tt/giaiBT.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +29,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="RunManager">
     <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -67,7 +59,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709207327684</updated>
-      <workItem from="1709207329071" duration="3827000" />
+      <workItem from="1709207329071" duration="4588000" />
+      <workItem from="1709273736498" duration="626000" />
+      <workItem from="1709292836060" duration="1242000" />
     </task>
     <servers />
   </component>
@@ -84,5 +78,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
