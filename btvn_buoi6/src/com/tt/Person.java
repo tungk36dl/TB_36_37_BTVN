@@ -3,10 +3,10 @@ package com.tt;
 import java.util.Scanner;
 
 public class Person {
-    public String name;
-    public String gender;
-    public String birthday;
-    public String address;
+    private String name;
+    private String gender;
+    private String birthday;
+    private String address;
 
 //    public static Person(){
 //
