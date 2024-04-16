@@ -1,0 +1,69 @@
+-- CREATE DATABASE btvn_buoi15;
+
+
+ CREATE TABLE khoa(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	ma_khoa varchar(10),
+	ten_khoa varchar(30),
+	dien_thoai VARCHAR(10)
+);
+
+CREATE TABLE sinh_vien(
+	id INT PRIMARY key AUTO_INCREMENT,
+	ma_sv INT UNIQUE ,
+	ho_ten_sv VARCHAR(30),
+	khoa_id int,
+	nam_sinh INT,
+	que_quan VARCHAR(30) ,
+	FOREIGN KEY (khoa_id) REFERENCES khoa(id)
+
+);
+
+-- Drop table
+
+DROP TABLE khoa;
+DROP TABLE sinh_vien;
+
+
+
+INSERT INTO khoa
+VALUES 	(1, 'CNTT', 'Công nghệ thông tin', '0987654321'),
+			(2, 'KT', 'Kế toán', '0123456789'),
+			(3, 'XD', 'Xây dựng', '0912345678');
+
+
+	
+INSERT INTO sinh_vien 
+VALUES 
+			(1, 16280, 'Phạm Thế Tùng', 1, 2004, 'Thái Bình'),
+			(2, 16281, 'Nguyễn Hoảng Tú', 1, 2004, 'Hà Nội'),
+			(3, 16282, 'Bui Minh Hoang', NULL , 2004, 'Thái Bình'),
+			(4, 16283, 'Pham Quang Thiep',1, 2004, 'Thái Bình'),
+			(5, 16284, 'Nguyễn Minh Dũng',1, 2003, 'Hà Nội'),
+			(6, 16285, 'Lê An', 3, 2003, 'Thanh Hóa'),
+			(7, 16286, 'Lưu Văn Hậu', null, 2004, 'Hải Phòng'),
+			(8, 16287, 'Pham Quốc Khánh', 2, 2004, 'Thái Bình'),
+			(9, 16288, 'Pham Tuấn Ngọc',3, 2002, 'Hải Phòng'),
+			(10, 16289, 'Lê Như Long', 3, 2002, 'Thanh Hóa');
+
+		
+
+			
+-- Hãy đưa ra thông tin gồm mã số, 
+-- họ tên và tên khoa của tất cả các sinh viên
+SELECT ma_sv, ho_ten_sv, ten_khoa 
+FROM sinh_vien AS sv JOIN khoa AS k 
+	ON sv.khoa_id = k.id; 
+	
+-- Sử dụng lệnh SQL để xuất ra thông tin về những sinh viên
+-- chưa được gán vào 1 khoa xác định
+SELECT * FROM sinh_vien WHERE khoa_id IS NULL;
+
+-- Sử dụng câu lệnh SQL xuất ra danh sách gồm  
+-- Mã số,Họ tên và Tuổi của các sinh viên khoa ‘Công nghệ thông tin’?
+
+SELECT ma_sv, ho_ten_sv, (2024 - nam_sinh) AS tuoi 
+FROM sinh_vien AS sv JOIN khoa AS k 
+	ON sv.khoa_id = k.id
+WHERE ten_khoa = 'Công nghệ thông tin';
+

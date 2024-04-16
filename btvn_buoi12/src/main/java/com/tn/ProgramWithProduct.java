@@ -64,7 +64,7 @@ public class ProgramWithProduct {
 
             Product product1 = new Product();
 
-            switch (n) {
+            switch ( n ) {
                 case 0 :
                     System.out.println("thuc hien yeu cau 0 : ");
                     product1.showData();
@@ -93,7 +93,7 @@ public class ProgramWithProduct {
                     System.out.println("Chuong trinh dung lai!!!");
             }
 
-            if(n >= 0 && n < 6) {
+            if(n < 6) {
                 System.out.println("Moi ban nhap yeu cau tiep theo");
                 n = sc.nextInt();
             }

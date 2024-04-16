@@ -1,0 +1,64 @@
+-- ----------------------Bai 1: 
+/* CREATE TABLE nhanvien (
+  ID INT NOT NULL AUTO_INCREMENT,
+  NAME VARCHAR(25) NOT NULL,
+  Ngay_Bat_Dau DATE,
+  So_Chiec INT,
+  PRIMARY KEY (ID)
+);
+*/
+
+/* INSERT INTO nhanvien (ID, NAME, Ngay_Bat_Dau, So_Chiec) VALUES
+(1, 'Hoang', '2007-01-24', 250),
+(2, 'Nam', NULL, 220),
+(3, 'Viet', '2007-05-06', 170),
+(3, 'Viet', '2007-05-27', 100),
+(4, 'Huong', '2007-04-06', 220),
+(5, 'Xuan', '2007-06-06', 300),
+(5, 'Xuan', '2007-02-06', 350);
+
+*/
+
+/* SELECT id, NAME, ngay_bat_dau 
+FROM nhanvien;
+ */
+ 
+ 
+ -- -------------------------Bai 2: 
+/* CREATE TABLE employee (
+	employee_id INT PRIMARY KEY AUTO_INCREMENT ,
+	employee_name VARCHAR(255),
+	salary INT
+);
+*/
+
+/* INSERT INTO employee (employee_id, employee_name, salary) 
+VALUE (12, 'Finch', 15000),
+		(22, 'Perter', 25000),
+		(32, 'Warner', 5600),
+		(42, 'Watson', 90000);
+*/
+
+-- SELECT * , (salary*2) new_salary FROM employee;
+
+
+
+-- -------------------------------- Bai 3:
+/* CREATE TABLE USER(
+	first_name VARCHAR(255),
+	last_name VARCHAR(255),
+	birthday datetime
+)
+*/
+
+/* INSERT INTO USER(first_name, last_name, birthday)
+VALUE ('Le Thi', 'Thu', '1996-12-12'),
+		('Vu Thi', 'Nga', '1997-11-17'),
+		('Nguyen Van', 'C', '2000-12-17'),
+		('Pham Van', 'D', '1998-10-11'),
+		('Tran Dinh', 'Trong', '1998-04-25'),
+		('Bui Tien', 'Dung', '1997-02-28');
+*/
+
+-- SELECT (birthday -  NOW()) soNgaySinhNhat FROM USER; 
+SELECT DATEDIFF(NOW(), birthday) AS days FROM USER;

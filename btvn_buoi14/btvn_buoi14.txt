@@ -1,0 +1,6 @@
+
+-- Tinsh giá trị trung bình các sản phẩm do Oracle cung câp 
+SELECT product_name, AVG(price) FROM order_data WHERE supplier = "Oracle" GROUP BY product_name;
+
+-- Hien thị tên các nhà cung cấp mà có ít nhất 2 sản phẩm chưa có giá trị thuế
+SELECT supplier FROM order_data WHERE tax IS NULL GROUP BY supplier HAVING COUNT(*) >= 2;
