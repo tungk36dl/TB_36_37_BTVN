@@ -72,6 +72,7 @@ public class AccountController {
             log.error("\n Khong tim thay id");
             return new ResponseEntity<>("Khong tim thay id: " + id, HttpStatus.BAD_REQUEST);
         }
+        log.info("Xoa thanh công");
         accountRepo.delete(account);
         return new ResponseEntity<>("Delete account successfully", HttpStatus.OK);
     }
