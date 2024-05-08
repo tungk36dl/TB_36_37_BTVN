@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Department</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+    <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/5.15.4/css/all.css} "/>
+    <script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+<body>
+    <h1>List Department: </h1>
+    <br>
+
+    <container class="container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Department Name</td>
+                    <td>Created At</td>
+                    <td>Updated At</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="obj : ${departments}">
+                    <td th:text="${obj.id}">id</td>
+                    <td th:text="${obj.departmentName}">departmentName</td>
+                    <td th:text="${obj.createdAt}">createdAt</td>
+                    <td th:text="${obj.updatedAt}">updatedAt</td>
+                    <td><a th:href="${'/department/delete/' + obj.id}">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </container>
+</body>
+</html>

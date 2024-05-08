@@ -1,0 +1,26 @@
+<div th:fragment="adminProductList">
+    <h4> List Products </h4>
+
+
+    <table class="table table-bordered ">
+        <thead>
+        <tr>
+            <td>Id</td>
+            <td>ProductName</td>
+            <td>Quantity</td>
+            <td>Cattegory</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="obj : ${products}">
+            <td th:text="${obj.id}">id</td>
+            <td th:text="${obj.productName}">productName</td>
+            <td th:text="${obj.quantity}">quantity</td>
+            <td th:text="${obj.categoryId != null ? obj.categoryId.categoryName : ''}">categoryId</td>
+
+            <td>Edit</td>
+            <td><a th:href="${'/admin/product/delete/' + obj.id}">Delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>

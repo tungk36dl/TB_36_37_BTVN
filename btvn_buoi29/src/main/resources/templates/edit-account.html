@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit-account</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+    <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/5.15.4/css/all.css} "/>
+    <script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+</head>
+<body>
+    <container class="conatiner">
+<!--        <form action="" method="POST">-->
+<!--            <input type="text" th:value="${opAccount.username}">-->
+<!--            <input type="text" th:value="${opAccount.email}">-->
+<!--            <input type="text" th:value="${opAccount.password}">-->
+<!--            <input type="submit" value="Submit">-->
+<!--        </form>-->
+
+        <form th:action="${'/account/edit/' + opAccount.id}" method="POST" id="account-form">
+            <div class="mb-3">
+                <label class="form-label username">Username</label>
+                <input type="text" class="form-control" th:value="${opAccount.username}" name="username" >
+            </div>
+            <div class="mb-3">
+                <label  class="form-label email">Email</label>
+                <input type="email" class="form-control" th:value="${opAccount.email}" name="email" >
+            </div>
+            <div class="mb-3">
+                <label class="form-label password">Password</label>
+                <input type="password" class="form-control" th:value="${opAccount.password}" name="password">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </container>
+
+<script>
+    $(document).ready(function() {
+
+        $('#account-form').on('submit', function (e) {
+
+            // e.preventDefault();
+            ajaxPost();
+
+            // let username = $('.username').val();
+            // let email = $('.email').val();
+            // let password = $('.password').val();
+            //
+            // let actionUrl = $(this).attr('action');
+            //
+            // $.ajax({
+            //     url: actionUrl,
+            //     type: "POST",
+            //     data: {
+            //         username: username,
+            //         email: email,
+            //         password: password,
+            //     },
+            //     dataType: "json",
+            //     success: function() {
+            //         console.log("Thanh cong");
+            //     },
+            //     error: function() {
+            //         console.log("Co loi!!!");
+            //     },
+            // });
+        });
+
+
+
+        function ajaxPost() {
+            var formData = {
+                username : $(".username").val(),
+                email : $(".email").val(),
+                password : $(".password").val(),
+            }
+
+            $.ajax({
+                type: "POST",
+                contentType : "application/json",
+                url : $(this).attr('action'),
+                data : JSON.stringify(formData),
+                dataType : 'json',
+                success: function() {
+                    console.log("Thanh cong");
+                },
+                error: function() {
+                    console.log("Co loi!!!");
+                },
+            });
+        }
+    });
+</script>
+</body>
+</html>

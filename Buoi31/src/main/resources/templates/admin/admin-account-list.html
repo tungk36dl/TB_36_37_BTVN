@@ -1,0 +1,26 @@
+<div th:fragment="adminAccountList">
+    <h4> List account </h4>
+
+
+    <table class="table table-bordered ">
+        <thead>
+        <tr>
+            <td>Id</td>
+            <td>Username</td>
+            <td>Email</td>
+            <td>Created_at</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="obj : ${accounts}">
+            <td th:text="${obj.id}">id</td>
+            <td th:text="${obj.username}">username</td>
+            <td th:text="${obj.email}">email</td>
+            <td th:text="${obj.createdAt}">createAt</td>
+
+            <td>Edit</td>
+            <td><a th:href="${'/admin/account/delete/' + obj.id}">Delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>

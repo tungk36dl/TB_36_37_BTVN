@@ -1,0 +1,25 @@
+<div th:fragment="adminCategoryList">
+    <h4> List Category </h4>
+
+    <h3 class="p-2 text-center" th:if="${result == 'false'}"> Xoa category that bai </h3>
+    <h3 class="p-2 text-center" th:if="${result == 'true'}"> Xoa category thanh cong </h3>
+
+    <table class="table table-bordered ">
+        <thead>
+        <tr>
+            <td>Id</td>
+            <td>Category Name</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="obj : ${categories}">
+            <td th:text="${obj.id}">id</td>
+            <td th:text="${obj.categoryName}">categoryName</td>
+
+
+            <td>Edit</td>
+            <td><a th:href="${'/admin/category/delete/' + obj.id}">Delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
